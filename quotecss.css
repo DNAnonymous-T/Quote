@@ -1,0 +1,28 @@
+body{
+    background: #d5def7;
+    font-size: 25px;
+  }
+
+  #js_timer{
+    padding: 10px;
+    text-align: center;
+
+  }
+  .content{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background:  #d5def7;
+  }
+
+
+  #btn{
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+ background-color: rgb(233, 179, 80);
+ margin-top: 20px;
+ align-items: center;
+  }
+  
