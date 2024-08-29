@@ -7,7 +7,10 @@ var e  = document.getElementById('img');
 var set = 1;
 var min = 1;
 var sec = 59;
-var EndString = "Gelesen, Gut.<br/><br/>Nicht Gelesen, AmBesten.<br/><br/>Jetzt, Übersetzen.";
+var EndString = `Habe gelesen, gut.<br/><br/>
+Nicht gelesen, Bester.<br/><br/>
+Mögen Sie all das Glück und den Frieden finden, die Sie verdienen.&#128591; 28.08.2024<br/><br/>
+"Jetzt, übersetzen!"`;
 
 (function (){
  
@@ -30,16 +33,14 @@ if(set > 0 ){
       elequick.style.color = "red";
         set =1;
     }
-
+   if (min > 0){
+      min--;
+    }
     if(sec>=10)
       {
     ele.innerHTML = '0'+min+':'+ sec;}
     else{
        ele.innerHTML = '0'+min+':'+ '0'+ sec;
-    }
-    
-    if (min > 0){
-      min--;
     }
    if (sec > 0) {
          sec--;
