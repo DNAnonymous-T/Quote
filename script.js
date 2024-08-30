@@ -12,13 +12,6 @@ Nicht gelesen, Bester.<br/><br/>
 Mögen Sie all das Glück und den Frieden finden, die Sie verdienen.&#128591; 28.08.2024<br/><br/>
 "Jetzt, übersetzen!"`;
 
-function visitOnlyOnce() {
-
-    if (getCookie("username") != "") {
-      display();
-    } 
-  }
-
 (function (){
 
 if(set > 0 ){
@@ -97,4 +90,9 @@ function setCookie(cname,cvalue,exdays) {
     return "";
   }
   
-  
+  function visitOnlyOnce() {
+
+    if (getCookie("username") != "") {
+      display();
+    } 
+  }
