@@ -93,6 +93,6 @@ function setCookie(cname,cvalue,exdays) {
   function visitOnlyOnce() {
 
     if (getCookie("username") != "") {
-      display();
+      disable();
     } 
   }
