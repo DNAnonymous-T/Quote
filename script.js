@@ -64,7 +64,8 @@ document.getElementById("btn").onclick= function() {
  //distrct everything
 function disable(){
     e.style.display = "none";
-    document.getElementById("btn").style.display = "none";
+    if(document.getElementById("btn")!=null){
+    document.getElementById("btn").style.display = "none";}
     document.getElementById("timer").style.display = "none";
     document.getElementById('content').innerHTML =EndString;
     sec = 0;
