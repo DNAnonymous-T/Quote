@@ -13,15 +13,10 @@ Mögen Sie all das Glück und den Frieden finden, die Sie verdienen.&#128591; 28
 "Jetzt, übersetzen!"`;
 
 function visitOnlyOnce() {
-    let user = getCookie("username");
-    if (user != "") {
+
+    if (getCookie("username") != "") {
       display();
-    } else {
-        user="VJ";
-       if (user != "" && user != null) {
-         setCookie("username", user, 30);
-       }
-    }
+    } 
   }
 
 (function (){
@@ -82,28 +77,24 @@ function disable(){
     sec = 0;
     min = 0;
     set = 0;
-    
+    if(getCookie("username")==""){
+        setCookie("username","VJ",30);
+    }
 }
 
 function setCookie(cname,cvalue,exdays) {
     const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires=" + d.toUTCString();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));let expires = "expires=" + d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
   
   function getCookie(cname) {
     let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
+    let decodedCookie = decodeURIComponent(document.cookie);let ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {let c = ca[i];
+      while (c.charAt(0) == ' ') {c = c.substring(1);}
+      if (c.indexOf(name) == 0) {return c.substring(name.length, c.length);}}
     return "";
   }
+  
+  
